@@ -6,6 +6,7 @@ import Head from "next/head";
 import Header from "./header/header";
 import Providers from "./providers";
 import authenticated from "./auth/authenticated";
+import logout from "./auth/logout";
 // import ModeSwitch from '@/components/ModeSwitch';
 
 const geistSans = Geist({
@@ -41,7 +42,7 @@ export default async function RootLayout({
         <Providers authenticated={isAuthenticated}>
           <CssBaseline />
           {/* <ModeSwitch /> */}
-          <Header />
+          <Header logout={logout} />
           <Container>
             {children}
           </Container>

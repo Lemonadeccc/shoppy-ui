@@ -1,8 +1,7 @@
 import { cookies } from "next/headers";
+import { AUTHENTICATION_COOKIE } from "./auth-cookie";
 
 export default async function authenticated() {
-  // Next.js dynamic APIs like `cookies()` must be awaited
-  // to correctly mark the route as dynamic.
-
-  return !!(await cookies().get("Authentication"));
+  let authCookie = await cookies();
+  return !!authCookie.get(AUTHENTICATION_COOKIE)?.value;
 }
