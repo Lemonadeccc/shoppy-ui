@@ -43,11 +43,10 @@ export default async function RootLayout({
           <CssBaseline />
           {/* <ModeSwitch /> */}
           <Header logout={logout} />
-          <Container>
+          <Container className={isAuthenticated ? 'mt-10' : ""}>
             {children}
           </Container>
         </Providers>
-
       </body>
     </html>
   );
