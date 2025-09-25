@@ -14,7 +14,7 @@ export default function Product({ product }: ProductProps) {
         <Typography variant="h4">{product.name}</Typography>
         {
           product.imageExists && (
-            <Image src={`${API_URL}/products/${product.id}.jpg`} className="w-full h-auto" sizes="100vw" width="0" height="0" alt="Picture of the product" />
+            <Image src={`${API_URL}/images/products/${product.id}.jpg`} width="0" height="0" className="w-full h-auto" sizes="100vw" alt="Picture of the product" />
           )
         }
         <Typography>{product.description}</Typography>
