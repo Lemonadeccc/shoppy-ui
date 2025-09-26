@@ -4,7 +4,7 @@ import { Container, CssBaseline } from "@mui/material";
 import Head from "next/head";
 import Header from "./header/header";
 import Providers from "./providers";
-import authenticated from "./auth/authenticated";
+import authenticated from "./auth/actions/authenticated";
 import logout from "./auth/logout";
 // import ModeSwitch from '@/components/ModeSwitch';
 
